@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default async function Brewery({ params }: Props) {
-    const { id } = await params
+    const { id } = params
     const res = await fetch(`https://api.openbrewerydb.org/v1/breweries/${id}`)
 
     if (!res.ok) return notFound()
@@ -40,7 +40,7 @@ export default async function Brewery({ params }: Props) {
                     </a>
                     <iframe
                         width="100%"
-                        height="500vh"
+                        height="500px"
                         loading="lazy"
                         allowFullScreen
                         className="w-full border-t border-gray-700"
