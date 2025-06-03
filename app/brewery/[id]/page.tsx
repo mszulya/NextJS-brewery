@@ -1,13 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
-interface  PageProps {
-    params: {
-        id: string
-    }
-}
-
-export default async function Brewery({ params }: PageProps) {
+export default async function Brewery({params}: { params: { id: string }}) {
     const { id } = params
     const res = await fetch(`https://api.openbrewerydb.org/v1/breweries/${id}`)
 

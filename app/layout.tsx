@@ -28,17 +28,15 @@ export default function RootLayout({
       <body className="bg-gray-900 text-white min-h-screen flex flex-col antialiased">
           <header className="bg-gray-800 shadow-md">
               <div className="max-w-7xl mx-auto px-4">
-                  <nav>
+                  <nav className="flex items-center bg-gray-800 px-6 h-14 space-x-8 shadow-md">
                       <ul className="flex items-center bg-gray-800 px-6 h-14 space-x-8 shadow-md">
-                          <div className="flex items-center">
-                              <Image
-                                  aria-hidden
-                                  src="/logo.png"
-                                  alt="Logo icon"
-                                  width={25}
-                                  height={25}
-                              />
-                          </div>
+                          <Image
+                              aria-hidden
+                              src="/logo.png"
+                              alt="Logo icon"
+                              width={25}
+                              height={25}
+                          />
                           <li>
                               <a
                                   href="/"
