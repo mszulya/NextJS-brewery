@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍺 Next.js Brewery Directory
 
-## Getting Started
+A modern brewery directory built with **Next.js 14**, **Tailwind CSS**, and the [Open Brewery DB API](https://www.openbrewerydb.org/). Search, view, and explore breweries with an interactive Google Map.
 
-First, run the development server:
+🔗 **Live Demo**: [https://br-six-sigma.vercel.app/](https://br-six-sigma.vercel.app/)
+
+---
+
+## ✨ Features
+
+- 🔍 **Live Search** with debounce and autocomplete
+- 📄 **Paginated Table** with 15 breweries per page
+- 📍 **Brewery Details Page** with embedded Google Map
+- 🌐 Responsive, mobile-friendly layout with Tailwind CSS
+- 🔁 Built using the **Next.js App Router** (app directory)
+
+## 📦 Tech Stack
+
+- **Next.js 14**
+- **React 18**
+- **Tailwind CSS**
+- **TypeScript**
+- **Google Maps Embed API**
+- **Open Brewery DB API**
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/mszulya/NextJS-brewery.git
+cd NextJS-brewery
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Create a `.env.local` file
+
+```
+NEXT_PUBLIC_GOOGLE_MAP_KEY=your_google_maps_api_key
+```
+
+> Make sure the key has Maps Embed API enabled in Google Cloud Console.
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see it live.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🖼️ Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Homepage | Table View | Detail Page |
+|----------|------------|-------------|
+| ![Home](public/screenshots/home.png) | ![Table](public/screenshots/table.png) | ![Detail](public/screenshots/detail.png) |
 
-## Learn More
+## 🔧 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+├── page.tsx           → Home with search
+├── table/             → Paginated brewery table
+├── brewery/[id]/      → Dynamic detail route with map
+├── api/               → Autocomplete API route
+public/                → Assets and logos
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🍺 Add filters by type or city
+- 📍 Map clustering for multiple results
+- 📝 Brewery reviews & ratings
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT — free to use, modify, and share.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Made with ❤️ by [Zulfiia](https://github.com/mszulya)
