@@ -54,11 +54,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see it live.
 
-## 🖼️ Screenshots
-
-| Homepage | Table View | Detail Page |
-|----------|------------|-------------|
-| ![Home](public/screenshots/home.png) | ![Table](public/screenshots/table.png) | ![Detail](public/screenshots/detail.png) |
 
 ## 🔧 Project Structure
 
