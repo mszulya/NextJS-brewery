@@ -4,6 +4,16 @@ import { useCallback } from 'react'
 import {useRouter} from 'next/navigation'
 import {usePagination} from '../hooks/usePagination'
 
+type Brewery = {
+    id: string;
+    name: string;
+    brewery_type: string;
+    city: string;
+    country: string;
+    website_url: string;
+    phone: string;
+}
+
 export default function Table() {
     const pageSize = 15
     const urlBuilder = useCallback(
@@ -18,7 +28,7 @@ export default function Table() {
         page,
         nextPage,
         prevPage,
-    } = usePagination(urlBuilder)
+    } = usePagination<Brewery>(urlBuilder)
     const router = useRouter()
 
     return (
