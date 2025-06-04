@@ -15,7 +15,6 @@ export default function Table() {
     const {
         data: breweries,
         loading,
-        error,
         page,
         nextPage,
         prevPage,
@@ -24,12 +23,11 @@ export default function Table() {
 
     return (
         <div className="p-4">
-            <div className="overflow-x-auto">
-                <table className="relative min-w-full divide-y divide-gray-700 text-sm text-left text-white">
-
-                    {loading && (
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 animate-pulse z-50 rounded" />
-                    )}
+            <div className="relative overflow-x-auto">
+                {loading && (
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300 animate-pulse z-50 rounded" />
+                )}
+                <table className="min-w-full divide-y divide-gray-700 text-sm text-left text-white">
                     <thead className="bg-gray-800">
                     <tr>
                         <th className="px-4 py-3">Brewery Name</th>

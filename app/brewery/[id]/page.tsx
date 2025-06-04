@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
-export default async function Brewery({params}: { params: { id: string }}) {
-    const { id } = params
+export default async function Brewery({params}: {params: Promise<{ id: string }>}) {
+    const { id } = await params
     const res = await fetch(`https://api.openbrewerydb.org/v1/breweries/${id}`)
 
     if (!res.ok) return notFound()
